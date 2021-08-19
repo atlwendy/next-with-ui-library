@@ -12,7 +12,17 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "paths": {
+      "@ui": ["node_modules/@tuftandneedle/ui"],
+      "@ui/*": [
+        "node_modules/@tuftandneedle/ui/*",
+        "node_modules/@tuftandneedle/ui/src/*",
+        "node_modules/@tuftandneedle/ui-tokens/*",
+        "node_modules/@tuftandneedle/ui-tokens/src/*"
+      ],
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
